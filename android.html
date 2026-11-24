@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>下载 听见 Android 安装包</title>
+  <style>
+    :root {
+      --bg: #12100d;
+      --card: #1c1813;
+      --border: #332a1e;
+      --text: #f5efe6;
+      --muted: #a99d8e;
+      --accent: #e09f4c;
+      --accent-dark: #221608;
+      --warn-bg: #2e2212;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft YaHei", sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 28px 22px;
+      text-align: center;
+      box-shadow: 0 18px 48px rgba(0, 0, 0, 0.45);
+    }
+    .badge {
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 16px;
+      border-radius: 16px;
+      background: #262018;
+      border: 1px solid #473927;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0;
+    }
+    h1 {
+      margin: 0 0 6px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .sub {
+      margin: 0 0 20px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .wx-tip {
+      display: none;
+      margin: 0 0 18px;
+      padding: 12px 14px;
+      border-radius: 12px;
+      background: var(--warn-bg);
+      border: 1px solid var(--accent);
+      color: #ffdca8;
+      font-size: 13px;
+      line-height: 1.55;
+      text-align: left;
+    }
+    .btn {
+      display: block;
+      width: 100%;
+      padding: 15px 18px;
+      border-radius: 14px;
+      background: var(--accent);
+      color: var(--accent-dark);
+      font-size: 16px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: opacity 0.15s ease;
+    }
+    .btn:active { opacity: 0.85; }
+    .meta {
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+      text-align: left;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+    .meta code {
+      word-break: break-all;
+      color: #d7cab8;
+      font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+      font-size: 11px;
+    }
+  </style>
+</head>
+<body>
+  <main class="card">
+    <div class="badge">听</div>
+    <h1>听见 · 安卓版</h1>
+    <p class="sub">版本 v0.3.0 · 2.8 MB · 支持 Android 8.0 及以上<br />免费全球电台、交响乐与演讲，无登录无广告</p>
+
+    <div id="wxTip" class="wx-tip">
+      <strong>微信内无法直接下载安装包：</strong>请点击右上角 <strong>···</strong>，选择「<strong>在浏览器打开</strong>」，再点下方按钮即可下载安装。
+    </div>
+
+    <a class="btn" href="./tingjian-0.3.0.apk" download="听见-0.3.0-android.apk">下载安装包（tingjian-0.3.0.apk）</a>
+
+    <div class="meta">
+      <div>安装提示：下载完成后点击安装，若系统提示「允许安装未知来源应用」，点击允许即可。</div>
+      <div>包名：<code>app.tingjian.android</code></div>
+      <div>SHA-256：<code>a2d06d72ff2d1a12468856a1e091ebddc4215ae1746a0993576f0afa5625e1da</code></div>
+    </div>
+  </main>
+  <script>
+    if (/MicroMessenger/i.test(navigator.userAgent || "")) {
+      document.getElementById("wxTip").style.display = "block";
+    }
+  </script>
+</body>
+</html>
